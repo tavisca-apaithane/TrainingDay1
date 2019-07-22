@@ -1,10 +1,9 @@
 import javax.print.DocFlavor;
 import java.util.ArrayList;
 
-public class Q {
+public class Q<T> {
 
-    public ArrayList<Integer> l = new ArrayList<Integer>();
-
+    public ArrayList<T> l = new ArrayList<T>();
     public Integer capacity=0;
     public Integer counter=0;
 
@@ -22,7 +21,7 @@ public class Q {
         this.capacity=newValue;
     }
 
-    public void add(Integer newValue)
+    public void add(T newValue)
     {
         try {
             if(counter<capacity) {
@@ -40,7 +39,7 @@ public class Q {
     {
         try {
             if (counter != 0) {
-                ArrayList<Integer> temp = new ArrayList<Integer>();
+                ArrayList<T> temp = new ArrayList<T>();
                 for (int i = 1; i < counter; i++) {
                     temp.add(l.get(i));
                 }
@@ -57,7 +56,7 @@ public class Q {
     }
     public void displayQ()
     {
-        for(Integer e : l)
+        for(T e : l)
             System.out.print(e+" ");
         System.out.println();
 
